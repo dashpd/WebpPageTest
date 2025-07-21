@@ -1,0 +1,136 @@
+body {
+	margin: 40px;
+	background-color: --white;
+	color: --yellow;
+	font-family: Monospace;
+	font-size: 20px;
+	line-height: 20px;
+	overscroll-behavior: none;
+}
+
+:root {
+	--yellow: #ffc600;
+	--black: #272727;
+	--white: #ffffff;
+	--marge: 20px;
+}
+
+@property --p {
+	syntax: '<percentage>';
+	inherits: false;
+	initial-value: 0%;
+}
+
+.square1 {
+	width: 60px;
+	aspect-ratio: 1;
+	border-radius: 4px;
+	box-shadow: inset 0 0 20px rgb(170 232 251), 0 0 3px #eee;
+	offset: top 50% right 50% circle(50%) var(--p);
+	transition: --p 1s linear;
+}
+
+.circle1 {
+	align-self: center;
+	width: 200px;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background: linear-gradient(-135deg, rgb(240 247 250) 30%, rgb(170 232 251));
+	box-shadow: 0 0 3px #eee;
+	margin: auto;
+
+	&:hover .square1 {
+		--p: 100%;
+	}
+}
+
+figcaption {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: fr fr fr ;
+	grid-template-rows: fr fr fr ;
+	gap: 20px;
+	grid-auto-flow: row;
+	grid-template-areas:
+		"D D G"
+		"S S G"
+		"R R C";
+	margin-bottom: 40px;
+}
+
+.container2 {
+	display: grid;
+	grid-template-columns: fr fr fr fr;
+	grid-template-rows: fr;
+	gap: 20px;
+	grid-auto-flow: row;
+	grid-template-areas:
+		"D D D G G G"
+		"B1 B1 B2 B2 B3 B3";
+	margin-bottom: 40px;
+}
+
+.area {
+	width: 90%;
+	height: 40px;
+}
+
+.D {
+	grid-area: D;
+}
+
+.S {
+	grid-area: S;
+}
+
+.B1 {
+	grid-area: B1;
+}
+
+.B2 {
+	grid-area: B2;
+}
+
+.G {
+	grid-area: G;
+}
+
+.B3 {
+	grid-area: B3;
+}
+
+.D,
+.S,
+.B1,
+.B2,
+.B3 {
+	/* We center the contents of these items. You can also do this with flexbox too! */
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	border: 10px solid rgba(255, 0, 0, 0.3);
+	border-radius: 20px;
+	font-size: 20px;
+	background-color: var(--white);
+
+}
+
+.G {
+	/* We center the contents of these items. You can also do this with flexbox too! */
+	display: grid;
+	justify-content: space-evenly;
+	align-items: center;
+	border: 10px solid rgba(255, 0, 0, 0.3);
+	border-radius: 20px;
+	font-size: 40px;
+	background-color: var(--white);
+	line-height: 50px;
+}
+
+img {
+	width: 100%;
+}
