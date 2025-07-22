@@ -117,9 +117,9 @@ body {
 	justify-content: right;
 	/* border: 10px solid rgba(255, 0, 0, 0.3);
 	border-radius: 20px; */
-	font-size: 20px;
+	font-size: 10px;
 	background-color: var(--white);
-	line-height: 20px;
+	line-height: 10px;
 }
 
 img {
