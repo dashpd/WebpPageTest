@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "dev": "vite --host --port 8888",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "three": "^0.172.0"
+  },
+  "devDependencies": {
+    "vite": "^6.0.11"
+  }
+}
