@@ -106,9 +106,9 @@ body {
 	align-items: center;
 	/* border: 10px solid rgba(255, 0, 0, 0.3);
 	border-radius: 20px; */
-	font-size: 25px;
+	font-size: 15px;
 	background-color: var(--white);
-	line-height: 30px;
+	line-height: 20px;
 }
 
 .D {
